@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alec Chiang | 蔣政煒</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+
+    <style>
+        /* 首頁自己專用的樣式保留在這裡 */
+        .slanted-divider {
+            position: relative;
+            background: var(--section-bg);
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            padding: 120px 0;
+            margin-top: -60px;
+            z-index: 10;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                        url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #typed-cursor {
+            color: var(--accent-cyan);
+            font-weight: 400;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-cyan);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-navbar">
+        <div class="site-navbar-inner">
+            <div class="site-brand">Alec Chiang</div>
+            <ul class="site-menu">
+                <li><a href="index.html" class="nav-link is-active">Home</a></li>
+                <li><a href="experience.html" class="nav-link">學經歷</a></li>
+                <li><a href="projects.html" class="nav-link">專案成果</a></li>
+                <li><a href="media.html" class="nav-link">天文與攝影</a></li>
+                <li><a href="others.html" class="nav-link">其他</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero-bg">
+            <div class="px-4 pt-24">
+                <h1 class="text-5xl md:text-8xl font-black mb-10 tracking-tight">
+                    Hello, I'm Alec Chiang
+                </h1>
+
+                <div class="h-10">
+                    <span id="typed" class="text-xl md:text-3xl text-gray-400 uppercase tracking-[0.2em]"></span>
+                    <span id="typed-cursor">|</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="slanted-divider">
+            <div class="max-w-6xl mx-auto px-10 grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h3 class="text-4xl font-black italic mb-8 uppercase tracking-tighter">About Myself</h3>
+                    <p class="text-gray-400 leading-loose mb-10 text-lg">
+                        我畢業於長庚大學人工智慧學系。我熱愛探索未知，擅長在團隊中協調與領導。
+                        目前專注於 <span class="text-white font-bold">超音波影像辨識</span> 與 <span class="text-white font-bold">超音波GAN</span> 應用，
+                        並曾獲選為<span class="text-white font-bold"> 115桃園市大專優秀青年</span>。<br>
+                        除了 AI 研究，我亦致力於天文推廣、火舞表演、咖啡學習與攝影技巧，追求技術與美學的共生。
+                    </p>
+                    <a href="#" class="btn-outline">Download CV</a>
+                </div>
+
+                <div class="relative group">
+                    <div class="relative overflow-hidden border-2 border-white/10 bg-zinc-900 aspect-[4/5] md:aspect-square">
+                        <img src="index/Me.jpg" alt="Alec Chiang" class="w-full h-full object-cover grayscale-[20%] contrast-[1.1] hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-cyan-400"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto py-32 px-10 relative z-20">
+            <div class="flex flex-col md:flex-row justify-between gap-20">
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-black uppercase mb-6 tracking-widest text-cyan-400">Main Research</h3>
+                    <p class="text-gray-500 italic">致力於將人工智慧技術應用於醫療臨床診斷與超音波系統整合。</p>
+                </div>
+                <div class="md:w-2/3 grid md:grid-cols-2 gap-12 text-gray-300">
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">碩士論文</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">運用 pix2pix 進行超音波 B-mode 影像轉 SWE 之生成研究。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">大學專題</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">EchoFlow-無程式碼之AI超音波整合系統。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">超音波與AI整合研究</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">開發與整合專屬於超音波影像系統的 AI 模型，協助醫療人員進行診斷與判別。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">網頁系統管理</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">長庚大學網頁管理與維護。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slanted-divider">
+            <div class="max-w-7xl mx-auto px-10">
+                <div class="flex flex-col md:flex-row justify-between gap-20">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-black uppercase mb-6 tracking-widest text-cyan-400">Experiences</h3>
+                        <p class="text-gray-400">從生醫產業實習到學術助教，致力於技術實踐與專業知識的傳遞，並具備全端網頁開發與系統整合之工作經驗。</p>
+                    </div>
+                    <div class="md:w-2/3 grid md:grid-cols-2 gap-12 text-gray-300">
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">米飛生醫</h4>
+                            <p class="text-sm leading-relaxed text-gray-400">於 2024 暑期、2025.01 ~ 2026.05 於米飛生醫進行實習。</p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">活動網站製作</h4>
+                            <p class="text-sm leading-relaxed text-gray-400">2024 TAAI Forum 網站製作工讀生。</p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">技術性工讀生</h4>
+                            <p class="text-sm leading-relaxed text-gray-400">擔任 112-114 學年度長庚大學技術性工讀生。</p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">課程教學助理</h4>
+                            <p class="text-xs leading-loose text-gray-400 font-mono">
+                                112-2 人工智慧概論<br>
+                                113-1 人工智慧概論<br>
+                                113-2 醫學影像處理<br>
+                                114-1 線性代數<br>
+                                114-2 平行程式設計
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto py-32 px-10 relative z-20">
+            <div class="flex flex-col md:flex-row justify-between gap-20">
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-black uppercase mb-6 tracking-widest text-cyan-400">Honors & Awards</h3>
+                    <p class="text-gray-500 leading-relaxed">積極挑戰自我邊界，在學術研究、學術競賽與領導力評鑑中持續追求卓越。</p>
+                </div>
+                <div class="md:w-2/3 grid md:grid-cols-2 gap-12 text-gray-300">
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">大專優秀青年</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">榮獲 115 年桃園市大專優秀青年，肯定學業與領導之綜合表現。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">國科會研究計畫</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">通過 113 年大專學生研究計畫，專注於醫學影像深度學習研究。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3 text-sm italic text-gray-500">萬潤 2024 / 數位雙生</h4>
+                        <h4 class="text-white font-bold mb-3">創新創意競賽</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">將 AI 專題實作轉化為具商業潛力與創新價值的成果。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3 text-sm italic text-gray-500">2023-2024 Let’s Chat</h4>
+                        <h4 class="text-white font-bold mb-3">AI 海報競賽</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">多次參與人工智慧學術應用海報發表並獲前三名與佳作肯定。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">全國社團評鑑</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">112 全國社團評選 - 年度最佳社團特色活動獎。</p>
+                    </div>
+                    <div class="border-l-2 border-zinc-800 pl-6 group hover:border-cyan-400 transition-colors">
+                        <h4 class="text-white font-bold mb-3">全國學生會評鑑</h4>
+                        <p class="text-sm leading-relaxed text-gray-400">2025 大專校院學生會評鑑 - 學生權益優良。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slanted-divider">
+            <div class="max-w-7xl mx-auto px-10">
+                <div class="flex flex-col md:flex-row justify-between gap-20">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-black uppercase mb-6 tracking-widest text-cyan-400">Activities</h3>
+                        <p class="text-gray-400">熱衷於社團組織與公共事務，具備跨領域的團隊協調能力。從天文觀測到光火藝術，在多元活動中淬鍊領導實力與美學視野。</p>
+                    </div>
+                    <div class="md:w-2/3 grid md:grid-cols-2 gap-12 text-gray-300">
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">社團創立</h4>
+                            <p class="text-sm leading-relaxed text-gray-400">長庚天文社創立 副社長</p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">大學社團幹部</h4>
+                            <p class="text-xs leading-loose text-gray-400">
+                                長庚學生會第 35 屆 - 權益部部長<br>
+                                長庚光火藝術社第 6 屆 - 副社長<br>
+                                長庚咖啡研習社第 15 屆 - 副社長<br>
+                                長庚天文暨太空科學社 - 教學長 / 顧問
+                            </p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">大型活動幹部</h4>
+                            <p class="text-xs leading-loose text-gray-400">
+                                2022 星空之子天文營 - 生活長<br>
+                                2023 星空之子天文營 - 人事長<br>
+                                長庚初升日記 10.0 - 隊輔長
+                            </p>
+                        </div>
+                        <div class="border-l-2 border-zinc-700 pl-6 group hover:border-cyan-400 transition-colors">
+                            <h4 class="text-white font-bold mb-3">攝影經驗</h4>
+                            <p class="text-xs leading-loose text-gray-400">
+                                第 19 屆台塑企業應用技術研討會攝影<br>
+                                長庚早療所活動影片製作<br>
+                                社團團體動力營影片製作<br>
+                                就是棒全國社區棒球比賽攝影團隊
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-social">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:Alec911125@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="site-footer-copy">Copyright © 2026 Alec Chiang 蔣政煒</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            strings: [
+                '桃園市大專優秀青年',
+                '人工智慧 | 醫學影像處理',
+                '超音波影像處理及辨識',
+                '天文 x 火舞'
+            ],
+            typeSpeed: 70,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true,
+            showCursor: false
+        });
+    </script>
+</body>
+</html>
